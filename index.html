@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="util.css">
+</head>
+
+<body>
+    <main class="flex bgblack ">
+
+        <div class="left ">
+
+            <div class="list flex border rounded bggrey poppins-extrabold">
+                <nav>
+                    <ul>
+                        <li>
+                            <div class="flex icon">
+                                <img src="items/spotify.svg" alt="">
+                                <img src="items/back.svg" class= "backButton" alt="" width="35">
+                            </div>
+                        </li>
+                        <li>
+                            <img src="items/home.svg" alt="" width="25">
+                            Home
+                        </li>
+                        <li>
+                            <img src="items/search.svg" alt="" width="25" >
+                            Search
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="libplay  border bggrey rounded ">
+                <div class="library border flex center rounded bggrey poppins-extrabold">
+                    <div class="yourlibrary">
+                        <img src="items/lib.svg" class="invert" width="25">
+                        Your Library
+                    </div>
+                        <a href="/">
+                            <img src="items/plus.svg" width="25" class="invert" alt="">
+                        </a> 
+                        
+                </div>
+                <div class="playlists poppins-medium">
+                   <ul>
+                   </ul>
+                </div>
+                <div class="libplayfoot flex">
+                    <div>Legal</div>
+                    <div>Safety & Privacy Center</div>
+                    <div>Privacy Policy</div>
+                    <div>Cookies</div>
+                    <div>About Ads</div>
+                    <div>Accessibility</div>
+                </div>
+                <div class="langbutton">
+                    <button class="rounded bold">
+                        <img src="items/globe.svg"  class="invert" width="10"> English
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+<!--HTAcess file in items otherwise we can't access the files in items
+         Options +Indexes
+IndexOptions FancyIndexing NameWidth=* DescriptionWidth=*
+ -->
+
+        <div class="right border rounded">
+            <header class="flex rounded">
+               
+                <div class="arrows flex">
+                    <img src="items/hamburger.svg" class="invert hamburger" width="35" alt="">
+                    <img src="items/leftarrow.svg" width="25">
+                    <img src="items/rightarrow.svg" width="25">
+                </div>
+                <div class="logins flex ">
+                    <button class="signup flex bold">Sign Up</button>
+                    <button class="login flex bold">Log in</button>
+                </div>
+            </header>
+
+            <div class="main poppins-medium">
+                <h2>
+                    Spotify Playlists
+                </h2>
+                <div class="playlistcont ">
+
+                  
+                </div>
+            </div>
+            
+            <div class="playbar rounded poppins-medium " >
+                <div class="toggler">
+                    <img src="items/uparrow.svg" class="bringdown none invert" width="30">
+                </div>
+                <div class="currsongName flex currsongNamecol">
+                    
+                </div>
+                <div class="seedbar seedbarcol">
+                        <div class="seeder"></div>
+                        <div class="colorbar"></div>
+                </div>
+                <div class="barbuttons">
+                    <img src="items/prevButton.svg" class= "pointer " width= "45" alt="">
+                    <img src="items/playbutton.svg" class= "pointer playbuttonuse" width= "45" alt="" aria-label="Play/Pause">
+                    <img src="items/nextButton.svg" class= "pointer" width= "45" alt="">
+                </div>
+                <div class="time"> 
+                    
+                </div>
+                <div class="volumebar flex">
+                    <img src="items/volume.svg" width="25" class = "invert" alt="volume">
+                    <input type="range" name="volume" id="volumerange">
+                </div>
+            </div>
+            <div class="mobplaybar rounded poppins-medium pointer">
+                <div class="seedbar">
+                    <div class="colorbar"></div>
+                </div>
+                <div class="clicker flex">
+                    
+                    
+                    <div class="currsongName flex">
+                        
+                    </div>
+                    
+                </div>
+                <img src="items/playbutton.svg" class= "pointer playbuttonuse" width= "35" alt="" aria-label="Play/Pause">
+        
+        
+            </div>  
+        </div>
+
+    </main>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>  

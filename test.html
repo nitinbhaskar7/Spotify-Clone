@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="util.css">
+    <style>
+        .playbar
+        {
+         flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+    padding: 8px 0px;
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    min-height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        }
+        /* display: none;} */
+    </style>
+</head>
+
+<body>
+    <div class="playbar rounded poppins-medium" >
+        <div class="seedbar">
+                <div class="seeder"></div>
+                <div class="colorbar"></div>
+        </div>
+        <div class="currsongName flex">
+             
+        </div>
+        <div class="barbuttons">
+            <img src="items/prevButton.svg" class= "pointer " width= "45" alt="">
+            <img src="items/playbutton.svg" class= "pointer playbuttonuse" width= "45" alt="" aria-label="Play/Pause">
+            <img src="items/nextButton.svg" class= "pointer" width= "45" alt="">
+        </div>
+        <div class="time"> 
+            
+        </div>
+        <div class="volumebar flex">
+            <img src="items/volume.svg" width="25" class = "invert" alt="volume">
+            <input type="range" name="volume" id="volumerange">
+        </div>
+    </div>
+</body>
+
+</html>
