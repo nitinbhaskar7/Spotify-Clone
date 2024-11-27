@@ -21,7 +21,7 @@ const toMinutes = (time) => {
 }
 
 async function getFolders () {
-    let songs = await fetch("http://127.0.0.1:3000/items/songs/");
+    let songs = await fetch("http://nitinbhaskar7.github.io//items/songs/");
     songs = await songs.text();
     let dummy = document.createElement("div");
     dummy.innerHTML = songs;
@@ -38,9 +38,9 @@ async function getFolders () {
     console.log(folders);
     console.log(folders[0].split("songs/").slice(-1)[0].slice(0,-1))
     folders.forEach(async (path) => {
-        let folder = await fetch("http://127.0.0.1:3000//"+ path + "desc.json");
+        let folder = await fetch("http://nitinbhaskar7.github.io///"+ path + "desc.json");
         let descr = await folder.json() ;
-        let cover = "http://127.0.0.1:3000//" + path + "cover.jpg"
+        let cover = "http://nitinbhaskar7.github.io///" + path + "cover.jpg"
         // console.log(descr)
         document.querySelector(".playlistcont").insertAdjacentHTML("beforeend" , `
             <div class="card rounded" data-folder = "${descr.name}" >
@@ -70,7 +70,7 @@ let currSong = new Audio(); // learning
 let currSongno = 0;
 async function getSongs() {
     console.log("Curr Folder  :  "  + currFolder) 
-    let f = await fetch(`http://127.0.0.1:3000/items/songs/${currFolder}`);
+    let f = await fetch(`http://nitinbhaskar7.github.io//items/songs/${currFolder}`);
     
     f = await f.text();
     console.log(f)
@@ -158,9 +158,9 @@ const playSong =  (currSongName) => {
 
     let artist = lis[currSongno].getElementsByClassName("artist")[0].innerText ;
 
-    document.body.querySelectorAll(".currsongName")[0].innerHTML = ` <img src="${"http://127.0.0.1:3000/items/songs/" + currFolder + "/cover.jpg"}" class="rounded"
+    document.body.querySelectorAll(".currsongName")[0].innerHTML = ` <img src="${"http://nitinbhaskar7.github.io//items/songs/" + currFolder + "/cover.jpg"}" class="rounded"
                             width="40" alt=""> <div> <div>${currSongName}</div> <div class="currartist">${artist}</div> </div>   `
-    document.body.querySelectorAll(".currsongName")[1].innerHTML = ` <img src="${"http://127.0.0.1:3000/items/songs/" + currFolder + "/cover.jpg"}" class="rounded"
+    document.body.querySelectorAll(".currsongName")[1].innerHTML = ` <img src="${"http://nitinbhaskar7.github.io//items/songs/" + currFolder + "/cover.jpg"}" class="rounded"
                             width="40" alt=""> <div> <div>${currSongName}</div> <div class="currartistmob">${artist}</div> <div> </div>  `
 
     // document.body.querySelector(".time").innerText = "0:0/0:0" 
